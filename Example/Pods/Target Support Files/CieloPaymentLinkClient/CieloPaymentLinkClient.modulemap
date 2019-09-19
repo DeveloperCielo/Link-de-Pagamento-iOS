@@ -1,0 +1,6 @@
+framework module CieloPaymentLinkClient {
+  umbrella header "CieloPaymentLinkClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

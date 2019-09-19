@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CieloPaymentLinkClient_Example' do
+  pod 'CieloPaymentLinkClient', :path => '../'
+
+  target 'CieloPaymentLinkClient_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

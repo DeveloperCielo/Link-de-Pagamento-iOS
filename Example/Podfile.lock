@@ -1,0 +1,16 @@
+PODS:
+  - CieloPaymentLinkClient (0.1.0)
+
+DEPENDENCIES:
+  - CieloPaymentLinkClient (from `../`)
+
+EXTERNAL SOURCES:
+  CieloPaymentLinkClient:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CieloPaymentLinkClient: 0dea3100e991facd036a3b51e4e6f8d2f2e33230
+
+PODFILE CHECKSUM: 4e8eb2e4d6a6c34f1d425a48b57fbd9b811b55ba
+
+COCOAPODS: 1.7.5
