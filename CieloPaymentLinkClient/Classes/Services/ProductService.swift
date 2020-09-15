@@ -24,6 +24,21 @@ class ProductService
             urlRequest.addValue(authorization, forHTTPHeaderField: "Authorization")
             urlRequest.httpBody = body
             
+            
+            
+            let sdkName = "PaymentLink-iOS"
+            guard let bundle = Bundle(identifier: "com.jnazario.CieloPaymentLink") else {
+                completion(.failure(.BadRequest(error: "Não foi possível obter o número da versão para registro no servidor.")))
+                return
+            }
+            
+            guard let buildVersion = bundle.infoDictionary?["CFBundleShortVersionString"] as? String else {
+                completion(.failure(.BadRequest(error: "Não foi possível obter o número da versão para registro no servidor.")))
+                return
+            }
+            
+            urlRequest.addValue("\(sdkName)@\(buildVersion)", forHTTPHeaderField: "x-sdk-version")
+            
             APICaller<ProductModel>().execute(urlRequest: urlRequest) { result in
                 completion(result)
             }
