@@ -15,5 +15,5 @@ Este SDK abstrai as chamadas de autenticação e criação do link de pagamento 
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
 
-  s.source_files = 'CieloPaymentLink/CieloPaymentLink/**/*'
+  s.source_files = 'CieloPaymentLink/CieloPaymentLink/**/*.{h,m,swift,framework}'
 end
